@@ -4,8 +4,8 @@ fazer uso do laço de repetição for.
 nome: Guilherme Henrique Soares Campos
 */
 const teclado = require("prompt-sync")();
-var numeros: number[] = []; 
-var tamanhoVetor = 10; 
+let numeros: number[] = []; 
+let tamanhoVetor = 10; 
 
 
 for (let i = 0; i < tamanhoVetor; i++) {

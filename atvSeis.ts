@@ -3,7 +3,7 @@
 produzam resto igual a 2. Utilizar o laço de repetição FOR
 Nome: Guilherme Henrique Soares Campos
 */
-for (var i = 1000; i <= 2000; i++) {
+for (let i = 1000; i <= 2000; i++) {
     if (i % 11 == 2) { 
         console.log(i); 
     }

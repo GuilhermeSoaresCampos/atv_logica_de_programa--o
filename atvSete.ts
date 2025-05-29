@@ -7,8 +7,8 @@ const teclado = require("prompt-sync")();
 let n = Number(teclado("Digite um número inteiro para calcular o fatorial: "));
 
 if (n >= 0) { 
-    var fatorial = 1; 
-    for (var i = 1; i <= n; i++) {
+    let fatorial = 1; 
+    for (let i = 1; i <= n; i++) {
         fatorial = fatorial * i; 
     }
 

@@ -5,14 +5,11 @@ Nome: Guilherme Henrique Soares Campos
 */
 const teclado = require("prompt-sync")(); 
 let n = Number(teclado("Digite um número inteiro para calcular o fatorial: "));
+let fatorial: number = 1;
 
-if (n >= 0) { 
-    let fatorial = 1; 
-    for (let i = 1; i <= n; i++) {
-        fatorial = fatorial * i; 
-    }
+for (let z = 1; z <= n; z++){
+fatorial *= z;
 
-    console.log("O fatorial de " + n + " é: " + fatorial);
-} else {
-    console.log("Por favor, insira um número inteiro não negativo.");
 }
+
+console.log(`O fatorial de ${n} é ${fatorial}`);

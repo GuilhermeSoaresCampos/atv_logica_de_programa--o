@@ -6,7 +6,7 @@ Nome: Guilherme Henrique Soares Campos
 
 
 let teclado = require (`prompt-sync`)();
-
+                                                                                                                                                                                                        
 
 let meuArray: number [] = [];
 
@@ -16,10 +16,12 @@ for (let cont = 0; cont <=9; cont++){
 
 let maior: number = meuArray[0];
 
-for (let i = 0; i < 19; i++){
-    if (maior < meuArray[i]){
-        maior = meuArray[i];
+for (let x = 0; x < 10; x++){
+    if (meuArray[x] > maior){
+        maior = meuArray[x];
     }
 }
-console.log(meuArray);
+
 console.log(`O maior número é ${maior}`);
+
+

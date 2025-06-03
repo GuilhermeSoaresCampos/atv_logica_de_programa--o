@@ -3,35 +3,26 @@ armazene em um vetor e ordene esses 10 números crescente,
 fazer uso do laço de repetição for.
 nome: Guilherme Henrique Soares Campos
 */
-const teclado = require("prompt-sync")();
-let numeros: number[] = []; 
-let tamanhoVetor = 10; 
 
+let teclado = require("prompt-sync")();
+let numeros: number[] = [];
+let temporario: number = 0;
+for (let x = 0; x <= 9; x++) {
+    numeros[x] = parseInt(teclado(`Digite o número do índice ${x} do Array:`));
 
-for (let i = 0; i < tamanhoVetor; i++) {
-    let numero = Number(teclado("Digite o " + (i + 1) + "º número:"));
-    if (!(numero !== numero)) { 
-        numeros[i] = numero;
-    } else {
-        console.log("Por favor, insira um número válido.");
-        i--; 
-    }
 }
 
-
-for (let i = 0; i < tamanhoVetor; i++) {
-    for (let j = 0; j < tamanhoVetor - 1; j++) {
-        if (numeros[j] > numeros[j + 1]) {
-            
-            var temp = numeros[j];
-            numeros[j] = numeros[j + 1];
-            numeros[j + 1] = temp;
+for (let z = 0; z < 10; z++) {
+    for (let y = z + 1; y < 10; y++) {
+        if (numeros[z] > numeros[y]) { // para ser decrescente precisa somente trocar o sinal de menor para maior
+            temporario = numeros[z];
+            numeros[z] = numeros[y];
+            numeros[y] = temporario;
         }
     }
-}
 
 
-console.log("Números ordenados em ordem crescente:");
-for (let i = 0; i < tamanhoVetor; i++) {
-    console.log(numeros[i]);
+
 }
+
+console.log(numeros); 
